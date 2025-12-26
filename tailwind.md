@@ -7,4 +7,7 @@ step 2: add in html file
 step 3: run in terminal
     npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch
 
+step 4: Live server 
+    go live
+
 Ok

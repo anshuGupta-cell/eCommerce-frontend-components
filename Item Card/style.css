@@ -1,58 +1,9 @@
-* {
+*{
     margin: 0;
     padding: 0;
+
 }
 
-.container {
-
-    max-width: ;
-    background: hsl(17, 100%, 63%);
-    padding: 1rem;
+.card {
+    padding: .25rem;
 }
-
-.form {
-    margin: auto;
-    padding: 1rem;
-    max-width: 900px;
-    display: grid;
-    gap: 10px;
-    background: hsla(0, 0%, 100%, 0.7);
-    border-radius: 1rem;
-
-    ul {
-        display: grid;
-    }
-
-    input, textarea {
-        background: none;
-        border-radius: 0.5rem;
-        padding: .5rem;
-    }
-}
-
-button {
-    padding: .5rem 1rem;
-    width: fit-content;
-    margin: auto;
-    border-radius: .5rem;
-    font-weight: bold;
-    background: hsla(17, 100%, 63%, 0.7);
- 
-    &:active {
-        transform: scale(0.7);
-        transition: transform 0.1s ease-in-out;
-    }
-}
-.flex{
-    display: flex;
-}
-.item_pic{
-  width: 8rem;
-  aspect-ratio: 1/1;
-  object-fit: cover;
-  border-radius: .5rem;
-}
-/* 
-button:active {
-    transform: scale(0.7);
-} */
