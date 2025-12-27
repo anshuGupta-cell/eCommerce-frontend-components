@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+.card {
+    padding: .25rem;
+}
+.button {
+    py: 0.7rem 8.7rem;
+ 
+}

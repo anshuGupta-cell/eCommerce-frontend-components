@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container grid">
+
+        <form class="form">
+            <h3>Add new item </h3>
+            <ul>
+                <label for="">Name</label>
+                <input type="text" placeholder="Enter item name">
+            </ul>
+            <ul>
+                <label for="">Unit Price</label>
+                <input type="number" min="1" placeholder="Enter item price">
+
+            </ul>
+            <ul>
+                <label for="">Description of product</label>
+                <textarea name="" id="" rows="3" placeholder="Enter item description"></textarea>
+
+            </ul>
+            <ul>
+                <label for="">Quantity</label>
+                <input type="number" min="1" placeholder="Enter item quantity">
+
+            </ul>
+            <ul class="flex">
+                <ul>
+                    <label for="">Pick an image file</label>
+                    <input type="file" placeholder="Enter item image">
+                </ul>
+                <img class="item_pic" src="../profile_pic.webp" alt="" srcset="">
+            </ul>
+            <button type="submit">Add</button>
+        </form>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
+
+<!-- model Item {
+  item_id     Int          @id @default(autoincrement())
+  item_name   String -
+  price       Float -
+  description String -
+  item_pic    String -
+  stock       Int -
+  eid         Int
+  order_items Order_Item[]
+  feedback    Feedback[]
+  emp         Emp          @relation(fields: [eid], references: [eid])
+
+  @@map("item")
+} -->
