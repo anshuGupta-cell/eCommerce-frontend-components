@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {}
+
+.container {
+    background: hsl(34, 100%, 97%);
+    max-width: 900px;
+    margin: auto;
+    padding: 1rem;
+    border-radius: 1rem;
+
+    form {
+        display: grid;
+        gap: .5rem;
+
+        ul {
+            display: grid;
+            gap: .25rem;
+
+            label {
+                font-weight: 500;
+            }
+
+            input,
+            textarea {
+                outline: 2px solid orange;
+                border-radius: .75rem;
+                padding: .2rem .5rem;
+            }
+        }
+
+        button {
+            margin: auto;
+            background: orange;
+            width: fit-content;
+            padding: .5rem .75rem;
+            border-radius: .75rem;
+        }
+    }
+}
