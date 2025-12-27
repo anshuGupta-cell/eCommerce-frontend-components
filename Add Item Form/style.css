@@ -6,17 +6,18 @@
 .container {
 
     max-width: ;
-    background: hsl(17, 100%, 63%);
+    background: hsl(0, 100%, 100%);
     padding: 1rem;
 }
 
 .form {
+    border: 1px solid black;
     margin: auto;
     padding: 1rem;
     max-width: 900px;
     display: grid;
     gap: 10px;
-    background: hsla(0, 0%, 100%, 0.7);
+    background: rgb(247, 240, 240);
     border-radius: 1rem;
 
     ul {
@@ -25,18 +26,19 @@
 
     input, textarea {
         background: none;
-        border-radius: 0.5rem;
+        border-radius: 0.70rem;
         padding: .5rem;
     }
 }
 
 button {
+    cursor: pointer;
     padding: .5rem 1rem;
-    width: fit-content;
+    width: 80px;
     margin: auto;
-    border-radius: .5rem;
-    font-weight: bold;
-    background: hsla(17, 100%, 63%, 0.7);
+    border-radius: 5rem;
+    background:#ebd567;
+    
  
     &:active {
         transform: scale(0.7);
