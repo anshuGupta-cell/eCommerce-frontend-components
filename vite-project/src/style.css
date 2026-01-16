@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.res-grid-240{
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}

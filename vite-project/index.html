@@ -9,7 +9,10 @@
   <link rel="stylesheet" href="style.css">
 
   <!-- font vietnam pro -->
-  <title>vite-project</title>
+
+  <title>Ammazon | Online shopping</title>
+  <meta name="description" content="This is an ecommerce website">
+
 </head>
 
 <body class="text-slate-900/80 bg-slate-30">
@@ -34,6 +37,7 @@
 
           <div class="flex gap-2 items-center">
 
+            <!-- dark light mode toggle -->
             <!-- <button onclick={()=> { setIsDarkMode(!isDarkMode) }} class="p-2 rounded-full hover:bg-slate-300
                 dark:hover:bg-darkHover">
                 <img class="w-5 h-5 dark:invert" src={`${isDarkMode ? "/svg/moon-02-stroke-rounded.svg"
@@ -87,18 +91,137 @@
     </nav>
   </header>
 
-  <main>
+  <main class="p-2 min-h-[100svh]">
 
+    <section class="max-w-5xl m-auto grid res-grid-240 gap-2 ">
+
+      <!-- Item card -->
+      <div key={item.item_id} class="grid p-2 bg-blue-50  gap-3 rounded-lg ">
+        <a href="/item">
+          <ul class="grid place-items-center">
+            <img class="h-full w-full object-cover rounded-lg aspect-square" src="./profile_pic.webp"
+              alt="Product image" />
+          </ul>
+          <ul class="p-1">
+            <h3 class="font-bold">Donut</h3>
+            <p class="text-sm">The best and most delicious donut in the world</p>
+            <p class="text-sm font-medium">Price: 599</p>
+            <p class="text-sm">Stock: 1500</p>
+          </ul>
+        </a>
+
+        <Button onclick="addToCart(item)">Add to cart</Button>
+        <!-- <ul
+          class="flex justify-between items-center qty-box w-32 rounded-full border-2 border-orange-500 px-3 bg-slate-300/5">
+          <button onclick="changeQuantity(item.item_id, -1)" class="font-bold pb-1 text-2xl w-6">-</button>
+          <p>51</p>
+          <button onclick="changeQuantity(item.item_id, +1)" class="font-bold pb-1 text-2xl w-6">+</button>
+        </ul> -->
+      </div>
+      <!-- Item card -->
+      <div key={item.item_id} class="grid p-2 bg-blue-50  gap-3 rounded-lg ">
+        <a href="/item">
+          <ul class="grid place-items-center">
+            <img class="h-full w-full object-cover rounded-lg aspect-square" src="./profile_pic.webp"
+              alt="Product image" />
+          </ul>
+          <ul class="p-1">
+            <h3 class="font-bold">Donut</h3>
+            <p class="text-sm">The best and most delicious donut in the world</p>
+            <p class="text-sm font-medium">Price: 599</p>
+            <p class="text-sm">Stock: 1500</p>
+          </ul>
+        </a>
+
+        <!-- <Button onclick="addToCart(item)">Add to cart</Button> -->
+        <ul
+          class="flex justify-between items-center qty-box w-32 rounded-full border-2 border-orange-500 px-3 bg-slate-300/5">
+          <button onclick="changeQuantity(item.item_id, -1)" class="font-bold pb-1 text-2xl w-6">-</button>
+          <p>51</p>
+          <button onclick="changeQuantity(item.item_id, +1)" class="font-bold pb-1 text-2xl w-6">+</button>
+        </ul>
+      </div>
+      <!-- Item card -->
+      <div key={item.item_id} class="grid p-2 bg-blue-50  gap-3 rounded-lg ">
+        <a href="/item">
+          <ul class="grid place-items-center">
+            <img class="h-full w-full object-cover rounded-lg aspect-square" src="./profile_pic.webp"
+              alt="Product image" />
+          </ul>
+          <ul class="p-1">
+            <h3 class="font-bold">Donut</h3>
+            <p class="text-sm">The best and most delicious donut in the world</p>
+            <p class="text-sm font-medium">Price: 599</p>
+            <p class="text-sm">Stock: 1500</p>
+          </ul>
+        </a>
+
+        <!-- <Button onclick="addToCart(item)">Add to cart</Button> -->
+        <ul
+          class="flex justify-between items-center qty-box w-32 rounded-full border-2 border-orange-500 px-3 bg-slate-300/5">
+          <button onclick="changeQuantity(item.item_id, -1)" class="font-bold pb-1 text-2xl w-6">-</button>
+          <p>51</p>
+          <button onclick="changeQuantity(item.item_id, +1)" class="font-bold pb-1 text-2xl w-6">+</button>
+        </ul>
+      </div>
+      <!-- Item card -->
+      <div key={item.item_id} class="grid p-2 bg-blue-50  gap-3 rounded-lg ">
+        <a href="/item">
+          <ul class="grid place-items-center">
+            <img class="h-full w-full object-cover rounded-lg aspect-square" src="./profile_pic.webp"
+              alt="Product image" />
+          </ul>
+          <ul class="p-1">
+            <h3 class="font-bold">Donut</h3>
+            <p class="text-sm">The best and most delicious donut in the world</p>
+            <p class="text-sm font-medium">Price: 599</p>
+            <p class="text-sm">Stock: 1500</p>
+          </ul>
+        </a>
+
+        <Button onclick="addToCart(item)">Add to cart</Button>
+        <!-- <ul
+          class="flex justify-between items-center qty-box w-32 rounded-full border-2 border-orange-500 px-3 bg-slate-300/5">
+          <button onclick="changeQuantity(item.item_id, -1)" class="font-bold pb-1 text-2xl w-6">-</button>
+          <p>51</p>
+          <button onclick="changeQuantity(item.item_id, +1)" class="font-bold pb-1 text-2xl w-6">+</button>
+        </ul> -->
+      </div>
+      <!-- Item card -->
+      <div key={item.item_id} class="grid p-2 bg-blue-50  gap-3 rounded-lg ">
+        <a href="/item">
+          <ul class="grid place-items-center">
+            <img class="h-full w-full object-cover rounded-lg aspect-square" src="./profile_pic.webp"
+              alt="Product image" />
+          </ul>
+          <ul class="p-1">
+            <h3 class="font-bold">Donut</h3>
+            <p class="text-sm">The best and most delicious donut in the world</p>
+            <p class="text-sm font-medium">Price: 599</p>
+            <p class="text-sm">Stock: 1500</p>
+          </ul>
+        </a>
+
+        <!-- <Button onclick="addToCart(item)">Add to cart</Button> -->
+        <ul
+          class="flex justify-between items-center qty-box w-32 rounded-full border-2 border-orange-500 px-3 bg-slate-300/5">
+          <button onclick="changeQuantity(item.item_id, -1)" class="font-bold pb-1 text-2xl w-6">-</button>
+          <p>51</p>
+          <button onclick="changeQuantity(item.item_id, +1)" class="font-bold pb-1 text-2xl w-6">+</button>
+        </ul>
+      </div>
+
+    </section>
   </main>
   <footer></footer>
 
   <script type="module" src="/src/main.js"></script>
   <script>
 
-    const closeMenu =() => {
+    const closeMenu = () => {
       document.getElementById("sideMenuRef").style.transform = "translateX(0rem)"
     }
-    const openMenu =() => {
+    const openMenu = () => {
       document.getElementById("sideMenuRef").style.transform = "translateX(-10.8rem)"
     }
 
@@ -106,3 +229,19 @@
 </body>
 
 </html>
+<!-- vite-project/
+│
+├── index.html              → Home page
+├── cart/
+│   └── index.html          → /cart
+├── itemdetail/
+│   └── index.html          → /itemdetail
+├── add-item/
+│   └── index.html          → /add-item
+│
+├── src/
+│   ├── main.js
+│   ├── cart.js
+│   └── style.css
+│
+├── vite.config.js -->
