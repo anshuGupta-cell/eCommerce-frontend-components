@@ -18,7 +18,7 @@
 <body class="text-slate-900/80 bg-slate-30">
 
   <header class="sticky z-40 top-0">
-    <nav class=" text-sm  p-2 bg-[#f1f5f578] backdrp-blur-lg">
+    <nav class=" text-sm  p-2 bg-[#f1f5f578] backdrop-blur-lg">
       <div class="z-10 mx-auto max-w-[90vw]  rounded-full shadow-sm bg-slate-100 ">
         <div class="flex  items-center justify-between md:justify-around p-2 gap-3 flex-wrap">
 
@@ -30,8 +30,8 @@
             class="sidebar hidden md:flex items-center py-2 px-3 text-nowrap text-slate-600  gap-1 bg-ma-100 rounded-full">
             <li><a onclick="closeMenu()" class="p-2 active " href="/">Home</a></li>
             <li><a onclick="closeMenu()" class="p-2 " href="/cart/">Cart</a></li>
-            <li><a onclick="closeMenu()" class="p-2 " href="/my-order">My Order</a></li>
-            <li><a onclick="closeMenu()" class="p-2 " href="/delivery">Delivery</a></li>
+            <li><a onclick="closeMenu()" class="p-2 " href="/my-order/">My Order</a></li>
+            <li><a onclick="closeMenu()" class="p-2 " href="/delivery/">Delivery</a></li>
             <li>
               <button onclick=toggleSubMenu(this) class="dropdown-btn">
                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
@@ -131,7 +131,88 @@
     </nav>
   </header>
   <main class="p-2 max-w-5xl m-auto">
-    <section class=" grid res-grid-240 gap-2 "></section>
+    <section class=" gap-2 ">
+      <h2 class="texl-xl font-semibold">All Orders</h2>
+      <div class="grid res-grid-280">
+        <!-- order card -->
+        <div class="max-w-[500px] border border-black grid gap-32 bg-slate-800 rounded-lg p-2 ">
+          <div class="">
+            <ul class="flex justify-between ">
+              <li><span class="font-bold">Order id: 21</span></li>
+              <li><span class="text-sm">21-01-2026</span></li>
+            </ul>
+            <ul>
+              <li><span>Mobile no: 9579695156</span></li>
+              <li><span>Address: ST Colony, Sinnar, Maharashtra</span></li>
+              <li><span>Total items: 5</span></li>
+              <li><span>Total amount: 299.99 Rs</span></li>
+            </ul>
+          </div>
+          <ul class="flex w-full justify-between text-sm font-semibold">
+            <button class="button"><a href="/my-order/3/" class="">See more details</a></button>
+            <p>Order Status: confirmed</p>
+
+          </ul>
+        </div>
+        <div class="max-w-[500px] border border-black grid gap-32 bg-slate-800 rounded-lg p-2 ">
+          <div class="">
+            <ul class="flex justify-between ">
+              <li><span class="font-bold">Order id: 21</span></li>
+              <li><span class="text-sm">21-01-2026</span></li>
+            </ul>
+            <ul>
+              <li><span>Mobile no: 9579695156</span></li>
+              <li><span>Address: ST Colony, Sinnar, Maharashtra</span></li>
+              <li><span>Total items: 5</span></li>
+              <li><span>Total amount: 299.99 Rs</span></li>
+            </ul>
+          </div>
+          <ul class="flex w-full justify-between text-sm font-semibold">
+            <button class="button"><a href="/my-order/3" class="">See more details</a></button>
+            <p>Order Status: confirmed</p>
+
+          </ul>
+        </div>
+        <div class="max-w-[500px] border border-black grid gap-32 bg-slate-800 rounded-lg p-2 ">
+          <div class="">
+            <ul class="flex justify-between ">
+              <li><span class="font-bold">Order id: 21</span></li>
+              <li><span class="text-sm">21-01-2026</span></li>
+            </ul>
+            <ul>
+              <li><span>Mobile no: 9579695156</span></li>
+              <li><span>Address: ST Colony, Sinnar, Maharashtra</span></li>
+              <li><span>Total items: 5</span></li>
+              <li><span>Total amount: 299.99 Rs</span></li>
+            </ul>
+          </div>
+          <ul class="flex w-full justify-between text-sm font-semibold">
+            <button class="button"><a href="/my-order/3" class="">See more details</a></button>
+            <p>Order Status: confirmed</p>
+
+          </ul>
+        </div>
+        <div class="max-w-[500px] border border-black grid gap-32 bg-slate-800 rounded-lg p-2 ">
+          <div class="">
+            <ul class="flex justify-between ">
+              <li><span class="font-bold">Order id: 21</span></li>
+              <li><span class="text-sm">21-01-2026</span></li>
+            </ul>
+            <ul>
+              <li><span>Mobile no: 9579695156</span></li>
+              <li><span>Address: ST Colony, Sinnar, Maharashtra</span></li>
+              <li><span>Total items: 5</span></li>
+              <li><span>Total amount: 299.99 Rs</span></li>
+            </ul>
+          </div>
+          <ul class="flex w-full justify-between text-sm font-semibold">
+            <button class="button"><a href="/my-order/3" class="">See more details</a></button>
+            <p>Order Status: confirmed</p>
+
+          </ul>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer></footer>
