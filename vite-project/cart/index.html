@@ -2,114 +2,181 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../src/style.css">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../src/style.css">
 
-  <!-- font vietnam pro -->
+    <!-- font vietnam pro -->
 
-  <title>Ammazon | Online shopping</title>
-  <meta name="description" content="This is an ecommerce website">
+    <title>Ammazon | Online shopping</title>
+    <meta name="description" content="This is an ecommerce website">
 
 </head>
 
 <body class="text-slate-900/80 bg-slate-30">
 
-  <header class="sticky z-40 top-0">
-    <nav class=" text-sm p-2 bg-[#f1f5f578] backdrp-blur-lg">
-      <div class="z-10 mx-auto max-w-[90vw]  rounded-full shadow-sm bg-slate-100 ">
-        <div class="flex  items-center justify-between md:justify-around p-2 gap-3 flex-wrap">
+    <header class="sticky z-40 top-0">
+        <nav class=" text-sm p-2 bg-[#f1f5f578] backdrp-blur-lg">
+            <div class="z-10 mx-auto max-w-[90vw]  rounded-full shadow-sm bg-slate-100 ">
+                <div class="flex  items-center justify-between md:justify-around p-2 gap-3 flex-wrap">
 
-          <div class="flex items-center bg-gradient-to-bl rounded-xl">
-            <a class="p-2 text-xl font-bold " href="/">Ammazon</a>
-          </div>
+                    <div class="flex items-center bg-gradient-to-bl rounded-xl">
+                        <a class="p-2 text-xl font-bold " href="/">Ammazon</a>
+                    </div>
 
-          <div class="hidden md:flex items-center py-2 px-3 text-nowrap text-slate-600  gap-1 bg-ma-100 rounded-full">
-            <a onclick="closeMenu()" class="p-2 active " href="/">Home</a>
-            <a onclick="closeMenu()" class="p-2" href="/add-item">add-item</a>
-            <a onclick="closeMenu()" class="p-2 " href="/cart">Cart</a>
-            <a onclick="closeMenu()" class="p-2 " href="/my-order">My Order</a>
-            <a onclick="closeMenu()" class="p-2 " href="/delivery">Delivery</a>
-            <a onclick="closeMenu()" class="p-2 " href="/order-confirmation">Order Confirmation</a>
-          </div>
+                    <div
+                        class="hidden md:flex items-center py-2 px-3 text-nowrap text-slate-600  gap-1 bg-ma-100 rounded-full">
+                        <a onclick="closeMenu()" class="p-2 active " href="/">Home</a>
+                        <a onclick="closeMenu()" class="p-2" href="/add-item">add-item</a>
+                        <a onclick="closeMenu()" class="p-2 " href="/cart">Cart</a>
+                        <a onclick="closeMenu()" class="p-2 " href="/my-order">My Order</a>
+                        <a onclick="closeMenu()" class="p-2 " href="/delivery">Delivery</a>
+                        <a onclick="closeMenu()" class="p-2 " href="/order-confirmation">Order Confirmation</a>
+                    </div>
 
-          <div class="flex gap-2 items-center">
+                    <div class="flex gap-2 items-center">
 
-            <!-- dark light mode toggle -->
-            <!-- <button onclick={()=> { setIsDarkMode(!isDarkMode) }} class="p-2 rounded-full hover:bg-slate-300
+                        <!-- dark light mode toggle -->
+                        <!-- <button onclick={()=> { setIsDarkMode(!isDarkMode) }} class="p-2 rounded-full hover:bg-slate-300
                 dark:hover:bg-darkHover">
                 <img class="w-5 h-5 dark:invert" src={`${isDarkMode ? "/svg/moon-02-stroke-rounded.svg"
                   : "/svg/sun-02-stroke-rounded.svg" }`} alt="theme" />
               </button> -->
 
-            <div class="flex">
-              <SignedOut>
-                <SignInButton>
-                  <button
-                    class="bg-purple-400 text-ceramic-white rounded-full font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 cursor-pointer">
-                    Sign In
-                  </button>
-                </SignInButton>
+                        <div class="flex">
+                            <SignedOut>
+                                <SignInButton>
+                                    <button
+                                        class="bg-purple-400 text-ceramic-white rounded-full font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 cursor-pointer">
+                                        Sign In
+                                    </button>
+                                </SignInButton>
 
-              </SignedOut>
-              <SignedIn>
-                <UserButton />
-              </SignedIn>
+                            </SignedOut>
+                            <SignedIn>
+                                <UserButton />
+                            </SignedIn>
+                        </div>
+
+                        <button onclick="openMenu()"
+                            class="p-2 rounded-full hover:bg-slate-300 dark:hover:bg-darkHover block md:hidden lg:hidden ">
+                            <img class="w-5 h-5 " src="/svg/bars-solid.svg" alt="hamburger" />
+                        </button>
+
+                    </div>
+
+
+                </div>
             </div>
 
-            <button onclick="openMenu()"
-              class="p-2 rounded-full hover:bg-slate-300 dark:hover:bg-darkHover block md:hidden lg:hidden ">
-              <img class="w-5 h-5 " src="/svg/bars-solid.svg" alt="hamburger" />
-            </button>
+            <!-- {/* mobile menu */} -->
+            <div id="sideMenuRef"
+                class="fixed grid w-40 top-2 -right-40 md:hidden p-3 text-nowrap   gap-1 bg-slate-100 z-10 mx-auto rounded-xl transition duration-500 text-slate-600  ">
 
-          </div>
+                <button onclick={closeMenu()}
+                    class="p-2 rounded-full hover:bg-slate-300 dark:hover:bg-darkHover block md:hidden lg:hidden place-self-end">
+                    <img class="w-5 h-5" src="/svg/xmark-regular.svg" alt="cross" />
+                </button>
 
+                <a onclick="closeMenu()" class="p-2 active " href="/">Home</a>
+                <a onclick="closeMenu()" class="p-2" href="/add-item">add-item</a>
+                <a onclick="closeMenu()" class="p-2 " href="/cart">Cart</a>
+                <a onclick="closeMenu()" class="p-2 " href="/my-order">My Order</a>
+                <a onclick="closeMenu()" class="p-2 " href="/delivery">Delivery</a>
+                <a onclick="closeMenu()" class="p-2 " href="/order-confirmation">Order Confirmation</a>
 
-        </div>
-      </div>
+            </div>
 
-      <!-- {/* mobile menu */} -->
-      <div id="sideMenuRef"
-        class="fixed grid w-40 top-2 -right-40 md:hidden p-3 text-nowrap   gap-1 bg-slate-100 z-10 mx-auto rounded-xl transition duration-500 text-slate-600  ">
+        </nav>
+    </header>
 
-        <button onclick={closeMenu()}
-          class="p-2 rounded-full hover:bg-slate-300 dark:hover:bg-darkHover block md:hidden lg:hidden place-self-end">
-          <img class="w-5 h-5" src="/svg/xmark-regular.svg" alt="cross" />
-        </button>
+    <main class="p-2 max-w-5xl m-auto">
+        <section class="grid res-grid-240 gap-2 ">
+            <!-- Cart item card  -->
+            <div class="max-w-[560px] grid p-2 bg-blue-50  gap-3 rounded-lg ">
+                <a href="/item">
+                    <ul class="grid place-items-center">
+                        <img class="h-full w-full object-cover rounded-lg aspect-square" src="/profile_pic.webp"
+                            alt="Product image" />
+                    </ul>
+                    <ul class="p-1">
+                        <h3 class="font-bold">Donut</h3>
+                        <p class="text-sm">The best and most delicious donut in the world</p>
+                        <p class="text-sm font-medium">Price: 599</p>
+                        <p class="text-sm">Stock: 1500</p>
+                    </ul>
+                </a>
 
-        <a onclick="closeMenu()" class="p-2 active " href="/">Home</a>
-        <a onclick="closeMenu()" class="p-2" href="/add-item">add-item</a>
-        <a onclick="closeMenu()" class="p-2 " href="/cart">Cart</a>
-        <a onclick="closeMenu()" class="p-2 " href="/my-order">My Order</a>
-        <a onclick="closeMenu()" class="p-2 " href="/delivery">Delivery</a>
-        <a onclick="closeMenu()" class="p-2 " href="/order-confirmation">Order Confirmation</a>
+                <!-- <Button onclick="addToCart(item)">Add to cart</Button> -->
+                <Button onclick="addToCart(item)">Remove</Button>
+                <ul
+                    class="flex justify-between items-center qty-box w-32 rounded-full border-2 border-orange-500 px-3 bg-slate-300/5">
+                    <button onclick="changeQuantity(item.item_id, -1)" class="font-bold pb-1 text-2xl w-6">-</button>
+                    <p>51</p>
+                    <button onclick="changeQuantity(item.item_id, +1)" class="font-bold pb-1 text-2xl w-6">+</button>
+                </ul>
+            </div>
+            <!-- Cart item card  -->
+            <div class="max-w-[560px] grid p-2 bg-blue-50  gap-3 rounded-lg ">
+                <a href="/item">
+                    <ul class="grid place-items-center">
+                        <img class="h-full w-full object-cover rounded-lg aspect-square" src="/profile_pic.webp"
+                            alt="Product image" />
+                    </ul>
+                    <ul class="p-1">
+                        <h3 class="font-bold">Donut</h3>
+                        <p class="text-sm">The best and most delicious donut in the world</p>
+                        <p class="text-sm font-medium">Price: 599</p>
+                        <p class="text-sm">Stock: 1500</p>
+                    </ul>
+                </a>
 
-      </div>
+                <!-- <Button onclick="addToCart(item)">Add to cart</Button> -->
+                <Button onclick="addToCart(item)">Remove</Button>
+                <ul
+                    class="flex justify-between items-center qty-box w-32 rounded-full border-2 border-orange-500 px-3 bg-slate-300/5">
+                    <button onclick="changeQuantity(item.item_id, -1)" class="font-bold pb-1 text-2xl w-6">-</button>
+                    <p>51</p>
+                    <button onclick="changeQuantity(item.item_id, +1)" class="font-bold pb-1 text-2xl w-6">+</button>
+                </ul>
+            </div>
+        </section>
 
-    </nav>
-  </header>
+        <!-- Total price and plce order  -->
+        <section class='gap-3 px-3 py-2 '>
+            <ul class='flex justify-center gap-1 font-semibold text-xl'>
+                <li>
+                    <h3>Sub Total</h3>
+                </li>
+                <li>
+                    <p class='font-bold'><sup>&#8377;</sup>1198<sup>00</sup></p>
+                </li>
+            </ul>
 
-  <main class="p-2">
-    <section class="max-w-5xl m-auto grid res-grid-240 gap-2 ">
-        
-    </section>
-  </main>
-  
-  <footer></footer>
+        </section>
 
-  <script type="module" src="/src/main.js"></script>
-  <script>
+        <!-- order Place page -->
+         <button>Proceed to place order</button>
+         { <Modal btnText={`Proceed to Place Order ( ${cartData.length} items )`} isActive={cartData.length> 0}>
+                <OrderDetails mobile={mobile} setMobile={setMobile} address={address} setAdress={setAdress}
+                    placeOrder={placeOrder} />
+            </Modal>}
+    </main>
 
-    const closeMenu = () => {
-      document.getElementById("sideMenuRef").style.transform = "translateX(0rem)"
-    }
-    const openMenu = () => {
-      document.getElementById("sideMenuRef").style.transform = "translateX(-10.8rem)"
-    }
+    <footer></footer>
 
-  </script>
+    <script type="module" src="/src/main.js"></script>
+    <script>
+
+        const closeMenu = () => {
+            document.getElementById("sideMenuRef").style.transform = "translateX(0rem)"
+        }
+        const openMenu = () => {
+            document.getElementById("sideMenuRef").style.transform = "translateX(-10.8rem)"
+        }
+
+    </script>
 </body>
 
 </html>
