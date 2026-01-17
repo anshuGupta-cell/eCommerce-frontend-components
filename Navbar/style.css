@@ -4,10 +4,13 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
+body {
+background: linear-gradient(to right,white,rgb(235, 183, 86));
 
+}
 .navbar {
     width: 100%;
-    min-height: 60px;
+    min-height: 90px;
     background-color: #3a3280;
     display: flex;
     align-items: center;
@@ -16,13 +19,21 @@
 }
 
 .logo {
+    padding-bottom: 35px;
+
     color: white;
     font-size: 1.2rem;
     font-weight: bold;
     white-space: nowrap;
 }
+.hamburger img{
+display: flex;
+    filter: invert(1);
+
+}
 
 .searchBar {
+    padding-bottom: 35px;
     flex: 1;                  
     display: flex;
     justify-content: center;
@@ -37,8 +48,7 @@
     border: none;
     outline: none;
 
-    color: white;
-    background: #ffffff url("search.svg") no-repeat 12px center;
+    background: #ffffff url("images/search.svg") no-repeat 12px center;
     background-size: 16px;
 }
 
@@ -48,4 +58,6 @@
 .cart img {
     width: 24px;
     cursor: pointer;
+    padding-bottom: 35px;
+
 }
