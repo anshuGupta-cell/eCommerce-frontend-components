@@ -15,7 +15,7 @@
 
 </head>
 
-<body class="text-slate-900/80">
+<body class="text-slate-900/80 bg-slate-30">
 
   <header class="sticky z-40 top-0">
     <nav class=" text-sm  p-2 bg-[#f1f5f578] backdrp-blur-lg">
@@ -80,8 +80,7 @@
               </SignedIn>
             </div>
 
-            <button onclick="openMenu()"
-              class="p-2 rounded-full hover:bg-slate-300 dark:hover:bg-darkHover block md:hidden lg:hidden ">
+            <button onclick="openMenu()" class="p-2 rounded-full hover:bg-slate-300  block md:hidden lg:hidden ">
               <img class="w-5 h-5 " src="/svg/bars-solid.svg" alt="hamburger" />
             </button>
 
@@ -95,7 +94,7 @@
         class="sidebar fixed grid w-40 top-2 -right-40 md:hidden p-3 text-nowrap   gap-1 bg-slate-100 z-10 mx-auto rounded-xl transition duration-500 text-slate-600  ">
 
         <button onclick={closeMenu()}
-          class="p-2 rounded-full hover:bg-slate-300 dark:hover:bg-darkHover block md:hidden lg:hidden place-self-end">
+          class="p-2 rounded-full hover:bg-slate-300 block md:hidden lg:hidden place-self-end">
           <img class="w-5 h-5" src="/svg/xmark-regular.svg" alt="cross" />
         </button>
 
@@ -131,9 +130,144 @@
     </nav>
   </header>
   <main class="p-2 max-w-5xl m-auto">
-      <h2 class="text-2xl font-semibold"></h2>
-      <section class="">
-        <h3 class="text-2xl font-semibold"></h3>
+    <section class="">
+      <div class="grid res-grid-280 gap-2 ">
+
+        <!-- card -->
+        <div class="max-w-[500px] border border-black grid gap-3 bg-slate-100 rounded-lg p-2 ">
+          <ul class="">
+            <ul class="flex justify-between">
+              <p class="font-bold">Order id: 23</p>
+              <p class="text-sm">12-1-2026</p>
+            </ul>
+            <ul>
+              <p>Mobile no: 9579695156</p>
+              <p>Address: ST Colony, Sinnar, Maharashtra</p>
+              <p>Total items: 5</p>
+              <p>Total amount: 799 Rs</p>
+            </ul>
+          </ul>
+
+          <ul class="flex w-full justify-around">
+
+            <!-- Modal  -->
+            <!-- <Modal btnText="Cancel order" isActive={true}>
+              <form class="max-w-[500px] border border-black grid gap-32 bg-slate-100 rounded-lg p-2 " onSubmit="">
+                <ul class="grid gap-2">
+                  <label name="desc" class="font-semibold">Enter the reason, why delivery is failed.</label>
+                  <textarea name="desc"
+                    class="text-black rounded-lg w-full focus:outline-green-500 py-1 px-3 bg-slate-100 " type="text"
+                    rows={5} placeholder="Enter details" onChange="" required />
+                </ul>
+                <button class="button">Submit</button>
+              </form>
+            </Modal> -->
+
+            <button onClick="" class="bg-green-500 rounded-lg py-1 px-3">Confirm</button>
+          </ul>
+
+        </div> 
+        <div class="max-w-[500px] border border-black grid gap-3 bg-slate-100 rounded-lg p-2 ">
+          <ul class="">
+            <ul class="flex justify-between">
+              <p class="font-bold">Order id: 23</p>
+              <p class="text-sm">12-1-2026</p>
+            </ul>
+            <ul>
+              <p>Mobile no: 9579695156</p>
+              <p>Address: ST Colony, Sinnar, Maharashtra</p>
+              <p>Total items: 5</p>
+              <p>Total amount: 799 Rs</p>
+            </ul>
+          </ul>
+
+          <ul class="flex w-full justify-around">
+
+            <!-- Modal  -->
+            <!-- <Modal btnText="Cancel order" isActive={true}>
+              <form class="max-w-[500px] border border-black grid gap-32 bg-slate-100 rounded-lg p-2 " onSubmit="">
+                <ul class="grid gap-2">
+                  <label name="desc" class="font-semibold">Enter the reason, why delivery is failed.</label>
+                  <textarea name="desc"
+                    class="text-black rounded-lg w-full focus:outline-green-500 py-1 px-3 bg-slate-100 " type="text"
+                    rows={5} placeholder="Enter details" onChange="" required />
+                </ul>
+                <button class="button">Submit</button>
+              </form>
+            </Modal> -->
+
+            <button onClick="" class="bg-green-500 rounded-lg py-1 px-3">Confirm</button>
+          </ul>
+
+        </div> 
+        <div class="max-w-[500px] border border-black grid gap-3 bg-slate-100 rounded-lg p-2 ">
+          <ul class="">
+            <ul class="flex justify-between">
+              <p class="font-bold">Order id: 23</p>
+              <p class="text-sm">12-1-2026</p>
+            </ul>
+            <ul>
+              <p>Mobile no: 9579695156</p>
+              <p>Address: ST Colony, Sinnar, Maharashtra</p>
+              <p>Total items: 5</p>
+              <p>Total amount: 799 Rs</p>
+            </ul>
+          </ul>
+
+          <ul class="flex w-full justify-around">
+
+            <!-- Modal  -->
+            <!-- <Modal btnText="Cancel order" isActive={true}>
+              <form class="max-w-[500px] border border-black grid gap-32 bg-slate-100 rounded-lg p-2 " onSubmit="">
+                <ul class="grid gap-2">
+                  <label name="desc" class="font-semibold">Enter the reason, why delivery is failed.</label>
+                  <textarea name="desc"
+                    class="text-black rounded-lg w-full focus:outline-green-500 py-1 px-3 bg-slate-100 " type="text"
+                    rows={5} placeholder="Enter details" onChange="" required />
+                </ul>
+                <button class="button">Submit</button>
+              </form>
+            </Modal> -->
+
+            <button onClick="" class="bg-green-500 rounded-lg py-1 px-3">Confirm</button>
+          </ul>
+
+        </div> 
+        <div class="max-w-[500px] border border-black grid gap-3 bg-slate-100 rounded-lg p-2 ">
+          <ul class="">
+            <ul class="flex justify-between">
+              <p class="font-bold">Order id: 23</p>
+              <p class="text-sm">12-1-2026</p>
+            </ul>
+            <ul>
+              <p>Mobile no: 9579695156</p>
+              <p>Address: ST Colony, Sinnar, Maharashtra</p>
+              <p>Total items: 5</p>
+              <p>Total amount: 799 Rs</p>
+            </ul>
+          </ul>
+
+          <ul class="flex w-full justify-around">
+
+            <!-- Modal  -->
+            <!-- <Modal btnText="Cancel order" isActive={true}>
+              <form class="max-w-[500px] border border-black grid gap-32 bg-slate-100 rounded-lg p-2 " onSubmit="">
+                <ul class="grid gap-2">
+                  <label name="desc" class="font-semibold">Enter the reason, why delivery is failed.</label>
+                  <textarea name="desc"
+                    class="text-black rounded-lg w-full focus:outline-green-500 py-1 px-3 bg-slate-100 " type="text"
+                    rows={5} placeholder="Enter details" onChange="" required />
+                </ul>
+                <button class="button">Submit</button>
+              </form>
+            </Modal> -->
+
+            <button onClick="" class="bg-green-500 rounded-lg py-1 px-3">Confirm</button>
+          </ul>
+
+        </div> 
+
+      </div>
     </section>
   </main>
 
