@@ -71,13 +71,18 @@
 .res-grid-240 {
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
+.res-grid-280 {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
 
 * {
   margin: 0;
   padding: 0;
 }
 
-
+.abc{
+  background: hotpink;
+}
 
 
 .sidebar ul li.active a {

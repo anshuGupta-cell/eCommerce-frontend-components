@@ -81,7 +81,7 @@
                         </div>
 
                         <button onclick="openMenu()"
-                            class="p-2 rounded-full hover:bg-slate-300 dark:hover:bg-darkHover block md:hidden lg:hidden ">
+                            class="p-2 rounded-full hover:bg-slate-300  block md:hidden lg:hidden ">
                             <img class="w-5 h-5 " src="/svg/bars-solid.svg" alt="hamburger" />
                         </button>
 
@@ -95,7 +95,7 @@
                 class="sidebar fixed grid w-40 top-2 -right-40 md:hidden p-3 text-nowrap   gap-1 bg-slate-100 z-10 mx-auto rounded-xl transition duration-500 text-slate-600  ">
 
                 <button onclick={closeMenu()}
-                    class="p-2 rounded-full hover:bg-slate-300 dark:hover:bg-darkHover block md:hidden lg:hidden place-self-end">
+                    class="p-2 rounded-full hover:bg-slate-300  block md:hidden lg:hidden place-self-end">
                     <img class="w-5 h-5" src="/svg/xmark-regular.svg" alt="cross" />
                 </button>
 
@@ -134,9 +134,7 @@
     </header>
     <main class="p-2 max-w-5xl m-auto">
         <section class="">
-            <form onSubmit="{(e)=> addItem(e)}" class="w-[95%] p-4 mx-auto grid gap-5 focus-within:outline outline-2
-                outline-gray-800 dark:outline-gray-500 rounded-lg dark:text-white/80">
-
+            <form onSubmit="{(e)=> addItem(e)}" class="w-[95%] p-4 mx-auto grid gap-5 focus-within:outline outline-2 outline-gray-800 rounded-lg">
                 <div class="font-semibold text-2xl ">
                     <h2>Add New Item</h2>
                 </div>
@@ -144,38 +142,36 @@
                     <div class="">
                         <ul class="grid">
                             <label for="">Name</label>
-                            <input type="text" class="text-black rounded-full focus:outline-green-500 py-1 px-3 bg-slate-100
-                            dark:bg-slate-600 dark:text-white/80" placeholder="Enter item name" required />
+                            <input type="text" class=" text-black rounded-full focus:outline-green-500 py-2 px-4 bg-slate-100
+                             " placeholder="Enter item name" required />
                         </ul>
                         <ul class="grid">
                             <label for="">Unit Price</label>
-                            <input type="number" class="text-black rounded-full focus:outline-green-500 py-1 px-3 bg-slate-100
-                            dark:bg-slate-600 dark:text-white/80" min="1" placeholder="Enter item price" required />
+                            <input type="number" class=" text-black rounded-full focus:outline-green-500 py-2 px-4 bg-slate-100" min="1" placeholder="Enter item price" required />
 
                         </ul>
-                        <ul class="grid">
+                        <ul class="grid ">
                             <label for="">Description of product</label>
-                            <textarea name="" class="text-black rounded-lg w-full focus:outline-green-500 py-1 px-3 bg-slate-100 dark:bg-slate-600 dark:text-white/80" rows="3" placeholder="Enter item description" required></textarea>
+                            <textarea name="" class=" text-black rounded-lg w-full focus:outline-green-500 py-2 px-4 bg-slate-100 " rows="3" placeholder="Enter item description" required></textarea>
 
                         </ul>
                     </div>
-                    <div class="grid gap-2">
+                    <div class="grid gap-2 ">
                         <ul class="grid">
                             <label for="">Quantity</label>
-                            <input type="number" class="text-black rounded-full focus:outline-green-500 py-1 px-3 bg-slate-100
-                            dark:bg-slate-600 dark:text-white/80" min="1" placeholder="Enter item quantity" required />
+                            <input type="number" class="text-black rounded-full focus:outline-green-500 py-2 px-4 bg-slate-100" min="1" placeholder="Enter item quantity" required />
                         </ul>
                         <ul class="grid gap-2">
                             <ul class="grid">
                                 <label for="">Pick an image file</label>
                                 <input type="file" class="text-black
-                                rounded-full focus:outline-green-500 py-1 px-3 bg-slate-100 dark:bg-slate-600
-                                dark:text-white/80 file:rounded-xl file:border-fuchsia-700 file:bg-purple-200/10
-                                file:dark:text-white/80 cursor-pointer file:cursor-pointer"
+                                rounded-full focus:outline-green-500 py-1 px-3 bg-slate-100 
+                                 file:rounded-xl file:border-fuchsia-700 file:bg-purple-200/10
+                                 cursor-pointer file:cursor-pointer"
                                 required
                                 />
                             </ul>
-                            <img class="object-cover rounded-lg h-full" src="/profile_pic.webp" alt="pic" />
+                            <img class="object-cover rounded-lg " src="/profile_pic.webp" alt="pic" />
                         </ul>
                     </div>
                 </div>
