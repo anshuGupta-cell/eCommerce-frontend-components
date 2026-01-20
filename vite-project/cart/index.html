@@ -131,57 +131,59 @@
   </header>
 
   <main class="p-2 max-w-5xl m-auto">
-    <section class="grid res-grid-240 gap-2 ">
-      <!-- Cart item card  -->
-      <div class="max-w-[560px] grid p-2 bg-blue-50  gap-3 rounded-lg ">
-        <a href="/item">
-          <ul class="grid place-items-center">
-            <img class="h-full w-full object-cover rounded-lg aspect-square" src="/profile_pic.webp"
-              alt="Product image" />
-          </ul>
-          <ul class="p-1">
-            <h3 class="font-bold">Donut</h3>
-            <p class="text-sm">The best and most delicious donut in the world</p>
-            <p class="text-sm font-medium">Price: 599</p>
-            <p class="text-sm">Stock: 1500</p>
-          </ul>
-        </a>
+    <section>
+      <h2 class="text-2xl font-semibold py-3">Items in Your Cart</h2>
+      <div class="grid res-grid-240 gap-2 ">
+        <!-- Cart item card  -->
+        <div class="max-w-[560px] grid p-2 bg-blue-50  gap-3 rounded-lg ">
+          <a href="/item">
+            <ul class="grid place-items-center">
+              <img class="h-full w-full object-cover rounded-lg aspect-square" src="/profile_pic.webp"
+                alt="Product image" />
+            </ul>
+            <ul class="p-1">
+              <h3 class="font-bold">Donut</h3>
+              <p class="text-sm">The best and most delicious donut in the world</p>
+              <p class="text-sm font-medium">Price: 599</p>
+              <p class="text-sm">Stock: 1500</p>
+            </ul>
+          </a>
 
-        <!-- <Button onclick="addToCart(item)">Add to cart</Button> -->
-        <Button onclick="addToCart(item)">Remove</Button>
-        <ul
-          class="flex justify-between items-center qty-box w-32 rounded-full border-2 border-orange-500 px-3 bg-slate-300/5">
-          <button onclick="changeQuantity(item.item_id, -1)" class="font-bold pb-1 text-2xl w-6">-</button>
-          <p>51</p>
-          <button onclick="changeQuantity(item.item_id, +1)" class="font-bold pb-1 text-2xl w-6">+</button>
-        </ul>
-      </div>
-      <!-- Cart item card  -->
-      <div class="max-w-[560px] grid p-2 bg-blue-50  gap-3 rounded-lg ">
-        <a href="/item">
-          <ul class="grid place-items-center">
-            <img class="h-full w-full object-cover rounded-lg aspect-square" src="/profile_pic.webp"
-              alt="Product image" />
+          <!-- <Button onclick="addToCart(item)">Add to cart</Button> -->
+          <Button onclick="addToCart(item)">Remove</Button>
+          <ul
+            class="flex justify-between items-center qty-box w-32 rounded-full border-2 border-orange-500 px-3 bg-slate-300/5">
+            <button onclick="changeQuantity(item.item_id, -1)" class="font-bold pb-1 text-2xl w-6">-</button>
+            <p>51</p>
+            <button onclick="changeQuantity(item.item_id, +1)" class="font-bold pb-1 text-2xl w-6">+</button>
           </ul>
-          <ul class="p-1">
-            <h3 class="font-bold">Donut</h3>
-            <p class="text-sm">The best and most delicious donut in the world</p>
-            <p class="text-sm font-medium">Price: 599</p>
-            <p class="text-sm">Stock: 1500</p>
-          </ul>
-        </a>
+        </div>
+        <!-- Cart item card  -->
+        <div class="max-w-[560px] grid p-2 bg-blue-50  gap-3 rounded-lg ">
+          <a href="/item">
+            <ul class="grid place-items-center">
+              <img class="h-full w-full object-cover rounded-lg aspect-square" src="/profile_pic.webp"
+                alt="Product image" />
+            </ul>
+            <ul class="p-1">
+              <h3 class="font-bold">Donut</h3>
+              <p class="text-sm">The best and most delicious donut in the world</p>
+              <p class="text-sm font-medium">Price: 599</p>
+              <p class="text-sm">Stock: 1500</p>
+            </ul>
+          </a>
 
-        <!-- <Button onclick="addToCart(item)">Add to cart</Button> -->
-        <Button onclick="addToCart(item)">Remove</Button>
-        <ul
-          class="flex justify-between items-center qty-box w-32 rounded-full border-2 border-orange-500 px-3 bg-slate-300/5">
-          <button onclick="changeQuantity(item.item_id, -1)" class="font-bold pb-1 text-2xl w-6">-</button>
-          <p>51</p>
-          <button onclick="changeQuantity(item.item_id, +1)" class="font-bold pb-1 text-2xl w-6">+</button>
-        </ul>
+          <!-- <Button onclick="addToCart(item)">Add to cart</Button> -->
+          <Button onclick="addToCart(item)">Remove</Button>
+          <ul
+            class="flex justify-between items-center qty-box w-32 rounded-full border-2 border-orange-500 px-3 bg-slate-300/5">
+            <button onclick="changeQuantity(item.item_id, -1)" class="font-bold pb-1 text-2xl w-6">-</button>
+            <p>51</p>
+            <button onclick="changeQuantity(item.item_id, +1)" class="font-bold pb-1 text-2xl w-6">+</button>
+          </ul>
+        </div>
       </div>
     </section>
-
     <!-- Total price and plce order  -->
     <section class='gap-3 px-3 py-2 '>
       <ul class='flex justify-center gap-1 font-semibold text-xl'>

@@ -29,6 +29,28 @@
                     <ul
                         class="sidebar hidden md:flex items-center py-2 px-3 text-nowrap text-slate-600  gap-1 bg-ma-100 rounded-full">
                         <li><a onclick="closeMenu()" class="p-2 active " href="/">Home</a></li>
+                        <li>
+                            <button onclick=toggleSubMenu(this) class="dropdown-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                    width="24px" fill="#e8eaed">
+                                    <path
+                                        d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h207q16 0 30.5 6t25.5 17l57 57h320q33 0 56.5 23.5T880-640v400q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H447l-80-80H160v480Zm0 0v-480 480Zm400-160v40q0 17 11.5 28.5T600-320q17 0 28.5-11.5T640-360v-40h40q17 0 28.5-11.5T720-440q0-17-11.5-28.5T680-480h-40v-40q0-17-11.5-28.5T600-560q-17 0-28.5 11.5T560-520v40h-40q-17 0-28.5 11.5T480-440q0 17 11.5 28.5T520-400h40Z" />
+                                </svg>
+                                <span>Category</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                    width="24px" fill="#e8eaed">
+                                    <path
+                                        d="M480-361q-8 0-15-2.5t-13-8.5L268-556q-11-11-11-28t11-28q11-11 28-11t28 11l156 156 156-156q11-11 28-11t28 11q11 11 11 28t-11 28L508-372q-6 6-13 8.5t-15 2.5Z" />
+                                </svg>
+                            </button>
+                            <ul class="sub-menu">
+                                <div>
+                                    <li><a href="/category/electronics/">Electronics</a></li>
+                                    <li><a href="/category/home-appliances/">Home Appliances</a></li>
+                                    <li><a href="/category/fashion/">Fashion</a></li>
+                                </div>
+                            </ul>
+                        </li>
                         <li><a onclick="closeMenu()" class="p-2 " href="/cart/">Cart</a></li>
                         <li><a onclick="closeMenu()" class="p-2 " href="/my-order/">My Order</a></li>
                         <li><a onclick="closeMenu()" class="p-2 " href="/delivery/">Delivery</a></li>
@@ -50,7 +72,6 @@
                                 <div>
                                     <li><a href="/admin/add-item/">Add item</a></li>
                                     <li><a href="/admin/order-confirmation/">Order Confirmation</a></li>
-                                    <li><a href="#">Project</a></li>
                                 </div>
                             </ul>
                         </li>
@@ -102,6 +123,28 @@
                 </button>
 
                 <a onclick="closeMenu()" class="p-2 active " href="/">Home</a>
+                <li>
+                    <button onclick=toggleSubMenu(this) class="dropdown-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#e8eaed">
+                            <path
+                                d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h207q16 0 30.5 6t25.5 17l57 57h320q33 0 56.5 23.5T880-640v400q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H447l-80-80H160v480Zm0 0v-480 480Zm400-160v40q0 17 11.5 28.5T600-320q17 0 28.5-11.5T640-360v-40h40q17 0 28.5-11.5T720-440q0-17-11.5-28.5T680-480h-40v-40q0-17-11.5-28.5T600-560q-17 0-28.5 11.5T560-520v40h-40q-17 0-28.5 11.5T480-440q0 17 11.5 28.5T520-400h40Z" />
+                        </svg>
+                        <span>Category</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#e8eaed">
+                            <path
+                                d="M480-361q-8 0-15-2.5t-13-8.5L268-556q-11-11-11-28t11-28q11-11 28-11t28 11l156 156 156-156q11-11 28-11t28 11q11 11 11 28t-11 28L508-372q-6 6-13 8.5t-15 2.5Z" />
+                        </svg>
+                    </button>
+                    <ul class="sub-menu">
+                        <div>
+                            <li><a href="/category/electronics/">Electronics</a></li>
+                            <li><a href="/category/home-appliances/">Home Appliances</a></li>
+                            <li><a href="/category/fashion/">Fashion</a></li>
+                        </div>
+                    </ul>
+                </li>
                 <a onclick="closeMenu()" class="p-2 " href="/cart/">Cart</a>
                 <a onclick="closeMenu()" class="p-2 " href="/my-order/">My Order</a>
                 <a onclick="closeMenu()" class="p-2 " href="/delivery/">Delivery</a>
@@ -123,7 +166,6 @@
                         <div>
                             <li><a href="/admin/add-item/">Add item</a></li>
                             <li><a href="/admin/order-confirmation/">Order Confirmation</a></li>
-                            <li><a href="#">Project</a></li>
                         </div>
                     </ul>
                 </li>
@@ -131,67 +173,85 @@
 
 
         </nav>
-    </header>
+    </header>~
     <main class="p-2 max-w-5xl m-auto">
-        <section class="category-container">
-            <ul><li><a href="/">All</a></li></ul>
-            <ul>
-                <li><a href="">Electronics</a></li>
-                <li><a href="">Fashion</a></li>
-                <li><a href="">Kitchen </a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-            </ul>
-        </section>
         <section class="">
-            <form onSubmit="{(e)=> addItem(e)}"
-                class="w-[95%] p-4 mx-auto grid gap-5 focus-within:outline outline-2 outline-gray-800 rounded-lg">
-                <div class="font-semibold text-2xl ">
-                    <h2>Add New Item</h2>
-                </div>
-                <div class=" grid  res-grid-240 gap-2">
-                    <div class="">
-                        <ul class="grid">
-                            <label for="">Name</label>
-                            <input type="text" class=" text-black rounded-full focus:outline-green-500 py-2 px-4 bg-slate-100
-                             " placeholder="Enter item name" required />
-                        </ul>
-                        <ul class="grid">
-                            <label for="">Unit Price</label>
-                            <input type="number"
-                                class=" text-black rounded-full focus:outline-green-500 py-2 px-4 bg-slate-100" min="1"
-                                placeholder="Enter item price" required />
 
-                        </ul>
-                        <ul class="grid ">
-                            <label for="">Description of product</label>
-                            <textarea name=""
-                                class=" text-black rounded-lg w-full focus:outline-green-500 py-2 px-4 bg-slate-100 "
-                                rows="3" placeholder="Enter item description" required></textarea>
+                <div class="max-w-6xl mx-auto p-4 grid grid-cols-1 md:grid-cols-3 gap-6">
 
-                        </ul>
+                    <!-- Left: Form -->
+                    <div class="md:col-span-2 bg-white p-6 rounded-xl shadow">
+
+                        <h2 class="text-2xl font-bold mb-6">Checkout</h2>
+
+                        <!-- Shipping -->
+                        <div class="space-y-4">
+                            <h3 class="font-semibold text-lg">Shipping Information</h3>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <input type="text" placeholder="First Name" class="border p-3 rounded-lg w-full">
+                                <input type="text" placeholder="Last Name" class="border p-3 rounded-lg w-full">
+                            </div>
+
+                            <input type="text" placeholder="Address" class="border p-3 rounded-lg w-full">
+                            <input type="text" placeholder="City" class="border p-3 rounded-lg w-full">
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <input type="text" placeholder="State" class="border p-3 rounded-lg w-full">
+                                <input type="text" placeholder="Zip Code" class="border p-3 rounded-lg w-full">
+                            </div>
+                        </div>
+
+                        <!-- Payment -->
+                        <div class="mt-6 space-y-4">
+                            <h3 class="font-semibold text-lg">Payment Method</h3>
+  
+                            <label class="flex items-center gap-2">
+                                <input type="radio" name="payment" checked>
+                                Credit / Debit Card
+                            </label>
+
+                            <label class="flex items-center gap-2">
+                                <input type="radio" name="payment">
+                                Cash on Delivery
+                            </label>
+
+                            <input type="text" placeholder="Card Number" class="border p-3 rounded-lg w-full">
+                        </div>
+
+                        <!-- Button -->
+                        <button class="w-full mt-6 bg-black text-white py-3 rounded-xl font-semibold hover:bg-gray-800">
+                            Place Order
+                        </button>
                     </div>
-                    <div class="grid gap-2 ">
-                        <ul class="grid">
-                            <label for="">Quantity</label>
-                            <input type="number"
-                                class="text-black rounded-full focus:outline-green-500 py-2 px-4 bg-slate-100" min="1"
-                                placeholder="Enter item quantity" required />
-                        </ul>
-                        <ul class="grid gap-2">
-                            <ul class="grid">
-                                <label for="">Pick an image file</label>
-                                <input type="file" class="text-black
-                                rounded-full focus:outline-green-500 py-1 px-3 bg-slate-100 
-                                 file:rounded-xl file:border-fuchsia-700 file:bg-purple-200/10
-                                 cursor-pointer file:cursor-pointer" required />
-                            </ul>
-                            <img class="object-cover rounded-lg " src="/profile_pic.webp" alt="pic" />
-                        </ul>
+
+                    <!-- Right: Order Summary -->
+                    <div class="bg-white p-6 rounded-xl shadow h-fit">
+
+                        <h3 class="text-xl font-bold mb-4">Order Summary</h3>
+
+                        <div class="space-y-4">
+                            <div class="flex justify-between">
+                                <span>Product 1</span>
+                                <span>₹499</span>
+                            </div>
+
+                            <div class="flex justify-between">
+                                <span>Product 2</span>
+                                <span>₹799</span>
+                            </div>
+
+                            <hr>
+
+                            <div class="flex justify-between font-semibold">
+                                <span>Total</span>
+                                <span>₹1298</span>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
-                <button class="button">Add Item</button>
-            </form>
+
         </section>
     </main>
 
