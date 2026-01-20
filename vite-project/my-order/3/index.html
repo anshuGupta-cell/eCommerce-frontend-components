@@ -17,121 +17,119 @@
 
 <body class="text-slate-900/80 bg-slate-30">
 
-    <header class="sticky z-40 top-0">
-        <nav class=" text-sm  p-2 bg-[#f1f5f578] backdrp-blur-lg">
-            <div class="z-10 mx-auto max-w-[90vw]  rounded-full shadow-sm bg-slate-100 ">
-                <div class="flex  items-center justify-between md:justify-around p-2 gap-3 flex-wrap">
+   <header class="sticky z-40 top-0">
+    <nav class=" text-sm  p-2 bg-[#f1f5f578] backdrp-blur-lg">
+      <div class="z-10 mx-auto max-w-[90vw]  rounded-full shadow-sm bg-slate-100 ">
+        <div class="flex  items-center justify-between md:justify-around p-2 gap-3 flex-wrap">
 
-                    <div class="flex items-center bg-gradient-to-bl rounded-xl">
-                        <a class="p-2 text-xl font-bold " href="/">Ammazon</a>
-                    </div>
+          <div class="flex items-center bg-gradient-to-bl rounded-xl">
+            <a class="p-2 text-xl font-bold " href="/">Ammazon</a>
+          </div>
 
-                    <ul
-                        class="sidebar hidden md:flex items-center py-2 px-3 text-nowrap text-slate-600  gap-1 bg-ma-100 rounded-full">
-                        <li><a onclick="closeMenu()" class="p-2 active " href="/">Home</a></li>
-                        <li><a onclick="closeMenu()" class="p-2 " href="/cart/">Cart</a></li>
-                        <li><a onclick="closeMenu()" class="p-2 " href="/my-order/">My Order</a></li>
-                        <li><a onclick="closeMenu()" class="p-2 " href="/delivery/">Delivery</a></li>
-                        <li>
-                            <button onclick=toggleSubMenu(this) class="dropdown-btn">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
-                                    width="24px" fill="#e8eaed">
-                                    <path
-                                        d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h207q16 0 30.5 6t25.5 17l57 57h320q33 0 56.5 23.5T880-640v400q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H447l-80-80H160v480Zm0 0v-480 480Zm400-160v40q0 17 11.5 28.5T600-320q17 0 28.5-11.5T640-360v-40h40q17 0 28.5-11.5T720-440q0-17-11.5-28.5T680-480h-40v-40q0-17-11.5-28.5T600-560q-17 0-28.5 11.5T560-520v40h-40q-17 0-28.5 11.5T480-440q0 17 11.5 28.5T520-400h40Z" />
-                                </svg>
-                                <span>Admin</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
-                                    width="24px" fill="#e8eaed">
-                                    <path
-                                        d="M480-361q-8 0-15-2.5t-13-8.5L268-556q-11-11-11-28t11-28q11-11 28-11t28 11l156 156 156-156q11-11 28-11t28 11q11 11 11 28t-11 28L508-372q-6 6-13 8.5t-15 2.5Z" />
-                                </svg>
-                            </button>
-                            <ul class="sub-menu">
-                                <div>
-                                    <li><a href="#">Add item</a></li>
-                                    <li><a href="#">Order Confirmation</a></li>
-                                    <li><a href="#">Project</a></li>
-                                </div>
-                            </ul>
-                        </li>
-                    </ul>
+          <ul
+            class="sidebar hidden md:flex items-center py-2 px-3 text-nowrap text-slate-600  gap-1 bg-ma-100 rounded-full">
+            <li><a onclick="closeMenu()" class="p-2 active " href="/">Home</a></li>
+            <li><a onclick="closeMenu()" class="p-2 " href="/cart/">Cart</a></li>
+            <li><a onclick="closeMenu()" class="p-2 " href="/my-order/">My Order</a></li>
+            <li><a onclick="closeMenu()" class="p-2 " href="/delivery/">Delivery</a></li>
+            <li>
+              <button onclick=toggleSubMenu(this) class="dropdown-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                  fill="#e8eaed">
+                  <path
+                    d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h207q16 0 30.5 6t25.5 17l57 57h320q33 0 56.5 23.5T880-640v400q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H447l-80-80H160v480Zm0 0v-480 480Zm400-160v40q0 17 11.5 28.5T600-320q17 0 28.5-11.5T640-360v-40h40q17 0 28.5-11.5T720-440q0-17-11.5-28.5T680-480h-40v-40q0-17-11.5-28.5T600-560q-17 0-28.5 11.5T560-520v40h-40q-17 0-28.5 11.5T480-440q0 17 11.5 28.5T520-400h40Z" />
+                </svg>
+                <span>Admin</span>
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                  fill="#e8eaed">
+                  <path
+                    d="M480-361q-8 0-15-2.5t-13-8.5L268-556q-11-11-11-28t11-28q11-11 28-11t28 11l156 156 156-156q11-11 28-11t28 11q11 11 11 28t-11 28L508-372q-6 6-13 8.5t-15 2.5Z" />
+                </svg>
+              </button>
+              <ul class="sub-menu">
+                <div>
+                  <li><a href="/admin/add-item/">Add item</a></li>
+                  <li><a href="/admin/order-confirmation/">Order Confirmation</a></li>
+                  <li><a href="#">Project</a></li>
+                </div>
+              </ul>
+            </li>
+          </ul>
 
-                    <div class="flex gap-2 items-center">
+          <div class="flex gap-2 items-center">
 
-                        <!-- dark light mode toggle -->
-                        <!-- <button onclick={()=> { setIsDarkMode(!isDarkMode) }} class="p-2 rounded-full hover:bg-slate-300
+            <!-- dark light mode toggle -->
+            <!-- <button onclick={()=> { setIsDarkMode(!isDarkMode) }} class="p-2 rounded-full hover:bg-slate-300
                 dark:hover:bg-darkHover">
                 <img class="w-5 h-5 dark:invert" src={`${isDarkMode ? "/svg/moon-02-stroke-rounded.svg"
                   : "/svg/sun-02-stroke-rounded.svg" }`} alt="theme" />
               </button> -->
 
-                        <div class="flex">
-                            <SignedOut>
-                                <SignInButton>
-                                    <button
-                                        class="bg-purple-400 text-ceramic-white rounded-full font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 cursor-pointer">
-                                        Sign In
-                                    </button>
-                                </SignInButton>
+            <div class="flex">
+              <SignedOut>
+                <SignInButton>
+                  <a href="/sign-in/">
+                    <button
+                      class="bg-purple-400 text-ceramic-white rounded-full font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 cursor-pointer">
+                      Sign In
+                    </button>
+                  </a>
+                </SignInButton>
 
-                            </SignedOut>
-                            <SignedIn>
-                                <UserButton />
-                            </SignedIn>
-                        </div>
-
-                        <button onclick="openMenu()"
-                            class="p-2 rounded-full hover:bg-slate-300 dark:hover:bg-darkHover block md:hidden lg:hidden ">
-                            <img class="w-5 h-5 " src="/svg/bars-solid.svg" alt="hamburger" />
-                        </button>
-
-                    </div>
-
-                </div>
+              </SignedOut>
+              <SignedIn>
+                <UserButton />
+              </SignedIn>
             </div>
 
-            <!-- {/* mobile menu */} -->
-            <ul id="sideMenuRef"
-                class="sidebar fixed grid w-40 top-2 -right-40 md:hidden p-3 text-nowrap   gap-1 bg-slate-100 z-10 mx-auto rounded-xl transition duration-500 text-slate-600  ">
+            <button onclick="openMenu()"
+              class="p-2 rounded-full hover:bg-slate-300 dark:hover:bg-darkHover block md:hidden lg:hidden ">
+              <img class="w-5 h-5 " src="/svg/bars-solid.svg" alt="hamburger" />
+            </button>
 
-                <button onclick={closeMenu()}
-                    class="p-2 rounded-full hover:bg-slate-300 dark:hover:bg-darkHover block md:hidden lg:hidden place-self-end">
-                    <img class="w-5 h-5" src="/svg/xmark-regular.svg" alt="cross" />
-                </button>
+          </div>
 
-                <a onclick="closeMenu()" class="p-2 active " href="/">Home</a>
-                <a onclick="closeMenu()" class="p-2" href="/add-item/">add-item</a>
-                <a onclick="closeMenu()" class="p-2 " href="/cart/">Cart</a>
-                <a onclick="closeMenu()" class="p-2 " href="/my-order/">My Order</a>
-                <a onclick="closeMenu()" class="p-2 " href="/delivery/">Delivery</a>
-                <a onclick="closeMenu()" class="p-2 " href="/order-confirmation/">Order Confirmation</a>
-                <li>
-                    <button onclick=toggleSubMenu(this) class="dropdown-btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
-                            fill="#e8eaed">
-                            <path
-                                d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h207q16 0 30.5 6t25.5 17l57 57h320q33 0 56.5 23.5T880-640v400q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H447l-80-80H160v480Zm0 0v-480 480Zm400-160v40q0 17 11.5 28.5T600-320q17 0 28.5-11.5T640-360v-40h40q17 0 28.5-11.5T720-440q0-17-11.5-28.5T680-480h-40v-40q0-17-11.5-28.5T600-560q-17 0-28.5 11.5T560-520v40h-40q-17 0-28.5 11.5T480-440q0 17 11.5 28.5T520-400h40Z" />
-                        </svg>
-                        <span>Admin</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
-                            fill="#e8eaed">
-                            <path
-                                d="M480-361q-8 0-15-2.5t-13-8.5L268-556q-11-11-11-28t11-28q11-11 28-11t28 11l156 156 156-156q11-11 28-11t28 11q11 11 11 28t-11 28L508-372q-6 6-13 8.5t-15 2.5Z" />
-                        </svg>
-                    </button>
-                    <ul class="sub-menu">
-                        <div>
-                            <li><a href="#">Add item</a></li>
-                            <li><a href="#">Order Confirmation</a></li>
-                            <li><a href="#">Project</a></li>
-                        </div>
-                    </ul>
-                </li>
-            </ul>
+        </div>
+      </div>
+
+      <!-- {/* mobile menu */} -->
+      <ul id="sideMenuRef"
+        class="sidebar fixed grid w-40 top-2 -right-40 md:hidden p-3 text-nowrap   gap-1 bg-slate-100 z-10 mx-auto rounded-xl transition duration-500 text-slate-600  ">
+
+        <button onclick={closeMenu()}
+          class="p-2 rounded-full hover:bg-slate-300 dark:hover:bg-darkHover block md:hidden lg:hidden place-self-end">
+          <img class="w-5 h-5" src="/svg/xmark-regular.svg" alt="cross" />
+        </button>
+
+        <a onclick="closeMenu()" class="p-2 active " href="/">Home</a>
+        <a onclick="closeMenu()" class="p-2 " href="/cart/">Cart</a>
+        <a onclick="closeMenu()" class="p-2 " href="/my-order/">My Order</a>
+        <a onclick="closeMenu()" class="p-2 " href="/delivery/">Delivery</a>
+        <li>
+          <button onclick=toggleSubMenu(this) class="dropdown-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+              <path
+                d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h207q16 0 30.5 6t25.5 17l57 57h320q33 0 56.5 23.5T880-640v400q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H447l-80-80H160v480Zm0 0v-480 480Zm400-160v40q0 17 11.5 28.5T600-320q17 0 28.5-11.5T640-360v-40h40q17 0 28.5-11.5T720-440q0-17-11.5-28.5T680-480h-40v-40q0-17-11.5-28.5T600-560q-17 0-28.5 11.5T560-520v40h-40q-17 0-28.5 11.5T480-440q0 17 11.5 28.5T520-400h40Z" />
+            </svg>
+            <span>Admin</span>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+              <path
+                d="M480-361q-8 0-15-2.5t-13-8.5L268-556q-11-11-11-28t11-28q11-11 28-11t28 11l156 156 156-156q11-11 28-11t28 11q11 11 11 28t-11 28L508-372q-6 6-13 8.5t-15 2.5Z" />
+            </svg>
+          </button>
+          <ul class="sub-menu">
+            <div>
+              <li><a href="/admin/add-item/">Add item</a></li>
+              <li><a href="/admin/order-confirmation/">Order Confirmation</a></li>
+              <li><a href="#">Project</a></li>
+            </div>
+          </ul>
+        </li>
+      </ul>
 
 
-        </nav>
-    </header>
+    </nav>
+  </header>
 
     <main class="p-2 max-w-5xl m-auto">
         <h2 class="text-xl font-semibold">Oder details</h2>
