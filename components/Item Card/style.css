@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+.card {
+    padding: .25rem;
+}
+.button {
+    py: 0.7rem 8.7rem;
+ 
+}
+
+.qty-box{
+    img{
+        aspect-ratio: 1/1;
+        
+    }
+}
+
+.p-3{
+    padding: .25rem .75rem;
+
+}

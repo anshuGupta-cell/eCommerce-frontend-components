@@ -1,0 +1,144 @@
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f1f1f1;
+    padding: 20px;
+}
+
+.product-box {
+    display: flex;
+    gap: 20px;
+    background: #fff;
+    padding: 20px;
+    max-width: 1100px;
+    margin: auto;
+    border-radius: 8px;
+}
+
+.thumbnails {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.thumbnails label {
+    border: 1px solid #ddd;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.thumbnails img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+.viewer {
+    position: relative;
+    width: 420px;
+    height: 420px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.viewer img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+input {
+    display: none;
+}
+
+#p1:checked ~ .viewer .img1,
+#p2:checked ~ .viewer .img2,
+#p3:checked ~ .viewer .img3,
+#p4:checked ~ .viewer .img4,
+#p5:checked ~ .viewer .img5 {
+    opacity: 1;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    user-select: none;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.info {
+    flex: 1;
+}
+
+.info h1 {
+    font-size: 24px;
+}
+.stock {
+text-decoration: underline;
+}
+.bought {
+    font-size: 15px;
+}
+
+.price {
+    color: #000000;
+    font-size: 28px;
+}
+
+.mrp {
+    text-decoration: line-through;
+    color: gray;
+    font-size: 16px;
+}
+ .buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.buttons button {
+    border: none;
+    border-radius: 25px;
+    padding: 10px 70px 15px 70px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+       
+}
+
+.add-cart {
+    background-color: #FFD814;  
+}
+
+.add-cart:hover {
+    background-color: #F7CA00;
+}
+
+.feedback {
+    background-color: #FFA41C;   
+    color: #111;
+}
+
+.feedback:hover {
+    background-color: #FA8900;
+}
+
+
