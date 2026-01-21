@@ -29,6 +29,7 @@
           <ul
             class="sidebar hidden md:flex items-center py-2 px-3 text-nowrap text-slate-600  gap-1 bg-ma-100 rounded-full">
             <li><a onclick="closeMenu()" class="p-2 active " href="/">Home</a></li>
+            <li><a onclick="closeMenu()" class="p-2 " href="/category/">Category</a></li>
             <li><a onclick="closeMenu()" class="p-2 " href="/cart/">Cart</a></li>
             <li><a onclick="closeMenu()" class="p-2 " href="/my-order/">My Order</a></li>
             <li><a onclick="closeMenu()" class="p-2 " href="/delivery/">Delivery</a></li>
@@ -50,7 +51,6 @@
                 <div>
                   <li><a href="/admin/add-item/">Add item</a></li>
                   <li><a href="/admin/order-confirmation/">Order Confirmation</a></li>
-                  <li><a href="#">Project</a></li>
                 </div>
               </ul>
             </li>
@@ -68,10 +68,12 @@
             <div class="flex">
               <SignedOut>
                 <SignInButton>
-                  <button
-                    class="bg-purple-400 text-ceramic-white rounded-full font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 cursor-pointer">
-                    Sign In
-                  </button>
+                  <a href="/sign-in/">
+                    <button
+                      class="bg-purple-400 text-ceramic-white rounded-full font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 cursor-pointer">
+                      Sign In
+                    </button>
+                  </a>
                 </SignInButton>
 
               </SignedOut>
@@ -100,11 +102,29 @@
         </button>
 
         <a onclick="closeMenu()" class="p-2 active " href="/">Home</a>
-        <a onclick="closeMenu()" class="p-2" href="/add-item/">add-item</a>
+        <li>
+          <button onclick=toggleSubMenu(this) class="dropdown-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+              <path
+                d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h207q16 0 30.5 6t25.5 17l57 57h320q33 0 56.5 23.5T880-640v400q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H447l-80-80H160v480Zm0 0v-480 480Zm400-160v40q0 17 11.5 28.5T600-320q17 0 28.5-11.5T640-360v-40h40q17 0 28.5-11.5T720-440q0-17-11.5-28.5T680-480h-40v-40q0-17-11.5-28.5T600-560q-17 0-28.5 11.5T560-520v40h-40q-17 0-28.5 11.5T480-440q0 17 11.5 28.5T520-400h40Z" />
+            </svg>
+            <span>Category</span>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+              <path
+                d="M480-361q-8 0-15-2.5t-13-8.5L268-556q-11-11-11-28t11-28q11-11 28-11t28 11l156 156 156-156q11-11 28-11t28 11q11 11 11 28t-11 28L508-372q-6 6-13 8.5t-15 2.5Z" />
+            </svg>
+          </button>
+          <ul class="sub-menu">
+            <div>
+              <li><a href="/category/electronics/">Electronics</a></li>
+              <li><a href="/category/home-appliances/">Home Appliances</a></li>
+              <li><a href="/category/fashion/">Fashion</a></li>
+            </div>
+          </ul>
+        </li>
         <a onclick="closeMenu()" class="p-2 " href="/cart/">Cart</a>
         <a onclick="closeMenu()" class="p-2 " href="/my-order/">My Order</a>
         <a onclick="closeMenu()" class="p-2 " href="/delivery/">Delivery</a>
-        <a onclick="closeMenu()" class="p-2 " href="/order-confirmation/">Order Confirmation</a>
         <li>
           <button onclick=toggleSubMenu(this) class="dropdown-btn">
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
@@ -121,7 +141,6 @@
             <div>
               <li><a href="/admin/add-item/">Add item</a></li>
               <li><a href="/admin/order-confirmation/">Order Confirmation</a></li>
-              <li><a href="#">Project</a></li>
             </div>
           </ul>
         </li>
@@ -139,40 +158,40 @@
 
         <div class="category-card">
             <img src="https://img.freepik.com/free-photo/woman-pink-jacket-looking-camera_23-2148316471.jpg?semt=ais_hybrid&w=740&q=80">
-            <div class="category-label">Women's Fashion</div>
+            <a href="/category/fashion/" class="category-label">Women's Fashion</a>
         </div>
 
         <div class="category-card">
           <img src="https://images.unsplash.com/photo-1601582589907-f92af5ed9db8?auto=format&fit=crop&w=800&q=80">
-            <div class="category-label">Men's Fashion</div>
+            <a href="/category/fashion/" class="category-label">Men's Fashion</a>
         </div>
 
         <div class="category-card">
            <img src="https://pinkblueindia.wordpress.com/wp-content/uploads/2015/07/children-fashion-clothing.jpg?w=600" >
-            <div class="category-label">Kids Fashion</div>
+            <a href="/category/fashion/" class="category-label">Kids Fashion</a>
         </div>
 
         <div class="category-card">
             <img src="https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?auto=format&fit=crop&w=800&q=80">
-            <div class="category-label">Beauty & Luxury</div>
+            <a href="/category/fashion/" class="category-label">Beauty & Luxury</a>
         </div>
 
         <div class="category-card">
             <img src="https://img.freepik.com/free-vector/household-appliances-realistic-composition_1284-65307.jpg?semt=ais_hybrid&w=740&q=80">
-            <div class="category-label">Home & Kitchen</div>
+            <a href="/category/home-appliances/" class="category-label">Home & Kitchen</a>
         </div>
 
         <div class="category-card">
             <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80">
-            <div class="category-label">Electronics</div>
+            <a href="/category/electronics/" class="category-label">Electronics</a>
         </div>
         <div class="category-card">
             <img src="https://img.freepik.com/free-photo/sports-tools_53876-138077.jpg?semt=ais_hybrid&w=740&q=80">
-            <div class="category-label">Sports & Fitness</div>
+            <a href="/category/electronics/" class="category-label">Sports & Fitness</a>
         </div>
         <div class="category-card">
             <img src="https://static.vecteezy.com/system/resources/thumbnails/026/781/389/small/gym-interior-background-of-dumbbells-on-rack-in-fitness-and-workout-room-photo.jpg">
-            <div class="category-label">GYM</div>
+            <a href="/category/electronics/" class="category-label">GYM</a>
         </div>
 
     </div>

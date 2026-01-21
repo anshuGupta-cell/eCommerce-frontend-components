@@ -68,10 +68,12 @@
             <div class="flex">
               <SignedOut>
                 <SignInButton>
-                  <button
-                    class="bg-purple-400 text-ceramic-white rounded-full font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 cursor-pointer">
-                    Sign In
-                  </button>
+                  <a href="/sign-in/">
+                    <button
+                      class="bg-purple-400 text-ceramic-white rounded-full font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 cursor-pointer">
+                      Sign In
+                    </button>
+                  </a>
                 </SignInButton>
 
               </SignedOut>
@@ -100,11 +102,9 @@
         </button>
 
         <a onclick="closeMenu()" class="p-2 active " href="/">Home</a>
-        <a onclick="closeMenu()" class="p-2" href="/add-item/">add-item</a>
         <a onclick="closeMenu()" class="p-2 " href="/cart/">Cart</a>
         <a onclick="closeMenu()" class="p-2 " href="/my-order/">My Order</a>
         <a onclick="closeMenu()" class="p-2 " href="/delivery/">Delivery</a>
-        <a onclick="closeMenu()" class="p-2 " href="/order-confirmation/">Order Confirmation</a>
         <li>
           <button onclick=toggleSubMenu(this) class="dropdown-btn">
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
@@ -130,65 +130,64 @@
 
     </nav>
   </header>
-  <main class="p-2 max-w-5xl m-auto">
-   <div class="checkout-container">
 
-    <h2>Place Your Order</h2>
-
-    <div class="form-group">
+  <main class="p-2 max-w-5xl m-auto ">
+   <div class="checkout-container m-auto">
+      <h2>Place Your Order</h2>
+      <div class="form-group">
         <label>Full Name</label>
         <input type="text" placeholder="Enter your name">
-    </div>
+      </div>
 
-    <div class="form-row">
+      <div class="form-row">
         <div class="form-group">
-            <label>Mobile Number</label>
-            <input type="text" placeholder="10-digit mobile number">
+          <label>Mobile Number</label>
+          <input type="text" placeholder="10-digit mobile number">
         </div>
         <div class="form-group">
-            <label>Pincode</label>
-            <input type="text" placeholder="Pincode">
+          <label>Pincode</label>
+          <input type="text" placeholder="Pincode">
         </div>
-    </div>
+      </div>
 
-    <div class="form-group">
+      <div class="form-group">
         <label>Address</label>
         <textarea rows="3" placeholder="House no, Street, Area"></textarea>
-    </div>
+      </div>
 
-    <div class="form-row">
+      <div class="form-row">
         <div class="form-group">
-            <label>City</label>
-            <input type="text" placeholder="City">
+          <label>City</label>
+          <input type="text" placeholder="City">
         </div>
         <div class="form-group">
-            <label>State</label>
-            <input type="text" placeholder="State">
+          <label>State</label>
+          <input type="text" placeholder="State">
         </div>
+      </div>
+
+      <div class="payment-method">
+        <div class="payment-option">
+          <input type="radio" name="payment">
+          <span>Cash on Delivery</span>
+        </div>
+        <div class="payment-option">
+          <input type="radio" name="payment">
+          <span>Credit / Debit Card</span>
+        </div>
+        <div class="payment-option">
+          <input type="radio" name="payment">
+          <span>UPI</span>
+        </div>
+        <div class="payment-option">
+          <input type="radio" name="payment">
+          <span>Net Banking</span>
+        </div>
+      </div>
+
+      <button class="place-order-btn">Place Order</button>
+
     </div>
-
-    <div class="payment-method">
-        <div class="payment-option">
-            <input type="radio" name="payment">
-            <span>Cash on Delivery</span>
-        </div>
-        <div class="payment-option">
-            <input type="radio" name="payment">
-            <span>Credit / Debit Card</span>
-        </div>
-        <div class="payment-option">
-            <input type="radio" name="payment">
-            <span>UPI</span>
-        </div>
-        <div class="payment-option">
-            <input type="radio" name="payment">
-            <span>Net Banking</span>
-        </div>
-    </div>
-
-    <button class="place-order-btn">Place Order</button>
-
-</div>
   </main>
 
   <footer></footer>

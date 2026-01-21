@@ -68,12 +68,10 @@
             <div class="flex">
               <SignedOut>
                 <SignInButton>
-                  <a href="/sign-in/">
-                    <button
-                      class="bg-purple-400 text-ceramic-white rounded-full font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 cursor-pointer">
-                      Sign In
-                    </button>
-                  </a>
+                  <button
+                    class="bg-purple-400 text-ceramic-white rounded-full font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 cursor-pointer">
+                    Sign In
+                  </button>
                 </SignInButton>
 
               </SignedOut>
@@ -102,9 +100,11 @@
         </button>
 
         <a onclick="closeMenu()" class="p-2 active " href="/">Home</a>
+        <a onclick="closeMenu()" class="p-2" href="/add-item/">add-item</a>
         <a onclick="closeMenu()" class="p-2 " href="/cart/">Cart</a>
         <a onclick="closeMenu()" class="p-2 " href="/my-order/">My Order</a>
         <a onclick="closeMenu()" class="p-2 " href="/delivery/">Delivery</a>
+        <a onclick="closeMenu()" class="p-2 " href="/order-confirmation/">Order Confirmation</a>
         <li>
           <button onclick=toggleSubMenu(this) class="dropdown-btn">
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
@@ -131,88 +131,62 @@
     </nav>
   </header>
   <main class="p-2 max-w-5xl m-auto ">
-    <section>
-      <h2 class="text-2xl font-semibold py-3">All Your Orders</h2>
 
-      <div class="grid res-grid-280 gap-2  ">
-        <!-- order card -->
-        <div class="max-w-[500px] border border-black grid gap-3 bg-slate-100 rounded-lg p-2 ">
-          <div class="">
-            <ul class="flex justify-between ">
-              <li><span class="font-bold">Order id: 21</span></li>
-              <li><span class="text-sm">21-01-2026</span></li>
-            </ul>
-            <ul>
-              <li><span>Mobile no: 9579695156</span></li>
-              <li><span>Address: ST Colony, Sinnar, Maharashtra</span></li>
-              <li><span>Total items: 5</span></li>
-              <li><span>Total amount: 299.99 Rs</span></li>
-            </ul>
-          </div>
-          <ul class="flex w-full justify-between text-sm font-semibold">
-            <button class="button"><a href="/my-order/3/" class="">See more details</a></button>
-            <p>Order Status: confirmed</p>
+    <section class="checkout-container">
+      <h2 class="text-2xl font-semibold py-3">Place Your Order</h2>
+      <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter your name">
+      </div>
 
-          </ul>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Mobile Number</label>
+          <input type="text" placeholder="10-digit mobile number">
         </div>
-        <div class="max-w-[500px] border border-black grid gap-3 bg-slate-100 rounded-lg p-2 ">
-          <div class="">
-            <ul class="flex justify-between ">
-              <li><span class="font-bold">Order id: 21</span></li>
-              <li><span class="text-sm">21-01-2026</span></li>
-            </ul>
-            <ul>
-              <li><span>Mobile no: 9579695156</span></li>
-              <li><span>Address: ST Colony, Sinnar, Maharashtra</span></li>
-              <li><span>Total items: 5</span></li>
-              <li><span>Total amount: 299.99 Rs</span></li>
-            </ul>
-          </div>
-          <ul class="flex w-full justify-between text-sm font-semibold">
-            <button class="button"><a href="/my-order/3/" class="">See more details</a></button>
-            <p>Order Status: confirmed</p>
-
-          </ul>
-        </div>
-        <div class="max-w-[500px] border border-black grid gap-3 bg-slate-100 rounded-lg p-2 ">
-          <div class="">
-            <ul class="flex justify-between ">
-              <li><span class="font-bold">Order id: 21</span></li>
-              <li><span class="text-sm">21-01-2026</span></li>
-            </ul>
-            <ul>
-              <li><span>Mobile no: 9579695156</span></li>
-              <li><span>Address: ST Colony, Sinnar, Maharashtra</span></li>
-              <li><span>Total items: 5</span></li>
-              <li><span>Total amount: 299.99 Rs</span></li>
-            </ul>
-          </div>
-          <ul class="flex w-full justify-between text-sm font-semibold">
-            <button class="button"><a href="/my-order/3/" class="">See more details</a></button>
-            <p>Order Status: confirmed</p>
-
-          </ul>
-        </div>
-        <div class="max-w-[500px] border border-black grid gap-3 bg-slate-100 rounded-lg p-2 ">
-          <div class="">
-            <ul class="flex justify-between ">
-              <li><span class="font-bold">Order id: 21</span></li>
-              <li><span class="text-sm">21-01-2026</span></li>
-            </ul>
-            <ul>
-              <li><span>Mobile no: 9579695156</span></li>
-              <li><span>Address: ST Colony, Sinnar, Maharashtra</span></li>
-              <li><span>Total items: 5</span></li>
-              <li><span>Total amount: 299.99 Rs</span></li>
-            </ul>
-          </div>
-          <ul class="flex w-full justify-between text-sm font-semibold">
-            <button class="button"><a href="/my-order/3/" class="">See more details</a></button>
-            <p>Order Status: confirmed</p>
-
-          </ul>
+        <div class="form-group">
+          <label>Pincode</label>
+          <input type="text" placeholder="Pincode">
         </div>
       </div>
+
+      <div class="form-group">
+        <label>Address</label>
+        <textarea rows="3" placeholder="House no, Street, Area"></textarea>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>City</label>
+          <input type="text" placeholder="City">
+        </div>
+        <div class="form-group">
+          <label>State</label>
+          <input type="text" placeholder="State">
+        </div>
+      </div>
+
+      <div class="payment-method">
+        <div class="payment-option">
+          <input type="radio" name="payment">
+          <span>Cash on Delivery</span>
+        </div>
+        <div class="payment-option">
+          <input type="radio" name="payment">
+          <span>Credit / Debit Card</span>
+        </div>
+        <div class="payment-option">
+          <input type="radio" name="payment">
+          <span>UPI</span>
+        </div>
+        <div class="payment-option">
+          <input type="radio" name="payment">
+          <span>Net Banking</span>
+        </div>
+      </div>
+
+      <button class="place-order-btn">Place Order</button>
+
     </section>
   </main>
 
