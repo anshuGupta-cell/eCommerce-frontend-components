@@ -11,27 +11,28 @@
 
   <title>Ammazon | Online shopping</title>
   <meta name="description" content="This is an ecommerce website">
-    <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
 
 </head>
 
 <body class="text-slate-900/80 bg-slate-30">
-<header class="sticky z-40 top-0">
+
+  <header class="sticky z-40 top-0">
     <nav class=" text-sm  p-2 bg-[#f1f5f578] backdrp-blur-lg">
       <div class="z-10 mx-auto max-w-[90vw]  rounded-full shadow-sm bg-slate-100 ">
         <div class="flex  items-center justify-between md:justify-around p-2 gap-3 flex-wrap">
 
           <div class="flex items-center bg-gradient-to-bl rounded-xl">
-            <a class="p-2 text-xl font-bold " href="/">Ammazon</a>
+            <a class="p-2 text-xl font-bold " href="../">Ammazon</a>
           </div>
 
           <ul
             class="sidebar hidden md:flex items-center py-2 px-3 text-nowrap text-slate-600  gap-1 bg-ma-100 rounded-full">
-            <li><a onclick="closeMenu()" class="p-2 active " href="/">Home</a></li>
-            <li><a onclick="closeMenu()" class="p-2 " href="/category/">Category</a></li>
-            <li><a onclick="closeMenu()" class="p-2 " href="/cart/">Cart</a></li>
-            <li><a onclick="closeMenu()" class="p-2 " href="/my-order/">My Order</a></li>
-            <li><a onclick="closeMenu()" class="p-2 " href="/delivery/">Delivery</a></li>
+            <li><a onclick="closeMenu()" class="p-2 active " href="../">Home</a></li>
+            <li><a onclick="closeMenu()" class="p-2 " href="../category/">Category</a></li>
+            <li><a onclick="closeMenu()" class="p-2 " href="../cart/">Cart</a></li>
+            <li><a onclick="closeMenu()" class="p-2 " href="../my-order/">My Order</a></li>
+            <li><a onclick="closeMenu()" class="p-2 " href="../delivery/">Delivery</a></li>
             <li>
               <button onclick=toggleSubMenu(this) class="dropdown-btn">
                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
@@ -48,8 +49,8 @@
               </button>
               <ul class="sub-menu">
                 <div>
-                  <li><a href="/admin/add-item/">Add item</a></li>
-                  <li><a href="/admin/order-confirmation/">Order Confirmation</a></li>
+                  <li><a href="../admin/add-item/">Add item</a></li>
+                  <li><a href="../admin/order-confirmation/">Order Confirmation</a></li>
                 </div>
               </ul>
             </li>
@@ -67,7 +68,7 @@
             <div class="flex">
               <SignedOut>
                 <SignInButton>
-                  <a href="/sign-in/">
+                  <a href="../sign-in/">
                     <button
                       class="bg-purple-400 text-ceramic-white rounded-full font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 cursor-pointer">
                       Sign In
@@ -83,7 +84,7 @@
 
             <button onclick="openMenu()"
               class="p-2 rounded-full hover:bg-slate-300 dark:hover:bg-darkHover block md:hidden lg:hidden ">
-              <img class="w-5 h-5 " src="/svg/bars-solid.svg" alt="hamburger" />
+              <img class="w-5 h-5 " src="../svg/bars-solid.svg" alt="hamburger" />
             </button>
 
           </div>
@@ -97,15 +98,14 @@
 
         <button onclick={closeMenu()}
           class="p-2 rounded-full hover:bg-slate-300 dark:hover:bg-darkHover block md:hidden lg:hidden place-self-end">
-          <img class="w-5 h-5" src="/svg/xmark-regular.svg" alt="cross" />
+          <img class="w-5 h-5" src="../svg/xmark-regular.svg" alt="cross" />
         </button>
 
         <a onclick="closeMenu()" class="p-2 active " href="/">Home</a>
-                <a onclick="closeMenu()" class="p-2 " href="/category/">Category</a>
-
-        <a onclick="closeMenu()" class="p-2 " href="/cart/">Cart</a>
-        <a onclick="closeMenu()" class="p-2 " href="/my-order/">My Order</a>
-        <a onclick="closeMenu()" class="p-2 " href="/delivery/">Delivery</a>
+        <a onclick="closeMenu()" class="p-2 " href="../category/">Category</a>
+        <a onclick="closeMenu()" class="p-2 " href="../cart/">Cart</a>
+        <a onclick="closeMenu()" class="p-2 " href="../my-order/">My Order</a>
+        <a onclick="closeMenu()" class="p-2 " href="../delivery/">Delivery</a>
         <li>
           <button onclick=toggleSubMenu(this) class="dropdown-btn">
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
@@ -120,8 +120,8 @@
           </button>
           <ul class="sub-menu">
             <div>
-              <li><a href="/admin/add-item/">Add item</a></li>
-              <li><a href="/admin/order-confirmation/">Order Confirmation</a></li>
+              <li><a href="../admin/add-item/">Add item</a></li>
+              <li><a href="../admin/order-confirmation/">Order Confirmation</a></li>
             </div>
           </ul>
         </li>
@@ -135,35 +135,12 @@
     <section>
       <h2 class="text-2xl font-semibold py-3">Items in Your Cart</h2>
       <div class="grid res-grid-240 gap-2 ">
-        <!-- Cart item card  -->
-        <div class="max-w-[560px] grid p-2 bg-blue-50  gap-3 rounded-lg ">
-          <a href="/item-details/">
-            <ul class="grid place-items-center">
-              <img class="h-full w-full object-cover rounded-lg aspect-square" src="/profile_pic.webp"
-                alt="Product image" />
-            </ul>
-            <ul class="p-1">
-              <h3 class="font-bold">Donut</h3>
-              <p class="text-sm">The best and most delicious donut in the world</p>
-              <p class="text-sm font-medium">Price: 599</p>
-              <p class="text-sm">Stock: 1500</p>
-            </ul>
-          </a>
 
-          <!-- <Button onclick="addToCart(item)">Add to cart</Button> -->
-          <Button class="button w-fit" onclick="addToCart(item)">Remove</Button>
-          <ul
-            class="flex justify-between items-center qty-box w-32 rounded-full border-2 border-orange-500 px-3 bg-slate-300/5">
-            <button onclick="changeQuantity(item.item_id, -1)" class="font-bold pb-1 text-2xl w-6">-</button>
-            <p>51</p>
-            <button onclick="changeQuantity(item.item_id, +1)" class="font-bold pb-1 text-2xl w-6">+</button>
-          </ul>
-        </div>
         <!-- Cart item card  -->
         <div class="max-w-[560px] grid p-2 bg-blue-50  gap-3 rounded-lg ">
-          <a href="/item-details/">
+          <a href="../item-details/">
             <ul class="grid place-items-center">
-              <img class="h-full w-full object-cover rounded-lg aspect-square" src="/profile_pic.webp"
+              <img class="h-full w-full object-cover rounded-lg aspect-square" src="../profile_pic.webp"
                 alt="Product image" />
             </ul>
             <ul class="p-1">
@@ -185,9 +162,9 @@
         </div>
         <!-- Cart item card  -->
         <div class="max-w-[560px] grid p-2 bg-blue-50  gap-3 rounded-lg ">
-          <a href="/item-details/">
+          <a href="../item-details/">
             <ul class="grid place-items-center">
-              <img class="h-full w-full object-cover rounded-lg aspect-square" src="/profile_pic.webp"
+              <img class="h-full w-full object-cover rounded-lg aspect-square" src="../profile_pic.webp"
                 alt="Product image" />
             </ul>
             <ul class="p-1">
@@ -207,10 +184,11 @@
             <button onclick="changeQuantity(item.item_id, +1)" class="font-bold pb-1 text-2xl w-6">+</button>
           </ul>
         </div>
+        <!-- Cart item card  -->
         <div class="max-w-[560px] grid p-2 bg-blue-50  gap-3 rounded-lg ">
-          <a href="/item-details/">
+          <a href="../item-details/">
             <ul class="grid place-items-center">
-              <img class="h-full w-full object-cover rounded-lg aspect-square" src="/profile_pic.webp"
+              <img class="h-full w-full object-cover rounded-lg aspect-square" src="../profile_pic.webp"
                 alt="Product image" />
             </ul>
             <ul class="p-1">
@@ -230,10 +208,11 @@
             <button onclick="changeQuantity(item.item_id, +1)" class="font-bold pb-1 text-2xl w-6">+</button>
           </ul>
         </div>
+        <!-- Cart item card  -->
         <div class="max-w-[560px] grid p-2 bg-blue-50  gap-3 rounded-lg ">
-          <a href="/item-details/">
+          <a href="../item-details/">
             <ul class="grid place-items-center">
-              <img class="h-full w-full object-cover rounded-lg aspect-square" src="/profile_pic.webp"
+              <img class="h-full w-full object-cover rounded-lg aspect-square" src="../profile_pic.webp"
                 alt="Product image" />
             </ul>
             <ul class="p-1">
@@ -253,6 +232,31 @@
             <button onclick="changeQuantity(item.item_id, +1)" class="font-bold pb-1 text-2xl w-6">+</button>
           </ul>
         </div>
+        <!-- Cart item card  -->
+        <div class="max-w-[560px] grid p-2 bg-blue-50  gap-3 rounded-lg ">
+          <a href="../item-details/">
+            <ul class="grid place-items-center">
+              <img class="h-full w-full object-cover rounded-lg aspect-square" src="../profile_pic.webp"
+                alt="Product image" />
+            </ul>
+            <ul class="p-1">
+              <h3 class="font-bold">Donut</h3>
+              <p class="text-sm">The best and most delicious donut in the world</p>
+              <p class="text-sm font-medium">Price: 599</p>
+              <p class="text-sm">Stock: 1500</p>
+            </ul>
+          </a>
+
+          <!-- <Button onclick="addToCart(item)">Add to cart</Button> -->
+          <Button class="button w-fit" onclick="addToCart(item)">Remove</Button>
+          <ul
+            class="flex justify-between items-center qty-box w-32 rounded-full border-2 border-orange-500 px-3 bg-slate-300/5">
+            <button onclick="changeQuantity(item.item_id, -1)" class="font-bold pb-1 text-2xl w-6">-</button>
+            <p>51</p>
+            <button onclick="changeQuantity(item.item_id, +1)" class="font-bold pb-1 text-2xl w-6">+</button>
+          </ul>
+        </div>
+
       </div>
     </section>
 
@@ -279,7 +283,7 @@
 
   <footer></footer>
 
-  <script type="module" src="/src/main.js"></script>
+  <!-- <script type="module" src="/src/main.js"></script> -->
   <script>
 
     const toggleButton = document.getElementById('toggle-btn')
